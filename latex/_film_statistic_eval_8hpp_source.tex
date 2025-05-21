@@ -1,0 +1,43 @@
+\doxysection{Film\+Statistic\+Eval.\+hpp}
+\hypertarget{_film_statistic_eval_8hpp_source}{}\label{_film_statistic_eval_8hpp_source}\index{include/FilmStatisticEval.hpp@{include/FilmStatisticEval.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ FilmStatisticEval.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ Film\_type\_classifier}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Created\ by\ Marek\ Tatýrek\ on\ 21.05.2025.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ FilmStatisticEval\_hpp}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ FilmStatisticEval\_hpp}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}FeatureProccesorAndClassifier.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_film_statistics_a1d383997c5e40127f0f1eb53a6e4daf4}{FilmStatistics}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_film_statistics_a4acf2ba4efa2c3daa697d1769146daaa}{step}}\ =\ 1;\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::map<ShotType,\ int>\ \mbox{\hyperlink{class_film_statistics_a94f2720dab851559ae134d9a749a4ab7}{shot\_counts}};\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::vector<std::pair<double,\ ShotType>>\ \mbox{\hyperlink{class_film_statistics_a64c4cb404baa09d471d1061ea2910005}{timeline}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_film_statistics_ab64b6098fc68ba0e97841eb055fd03e9}{totalFrames}}\ =\ 0;\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_film_statistics_a1d383997c5e40127f0f1eb53a6e4daf4}{FilmStatistics}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_film_statistics_a430510040632f0f5e03d26bff9a2ad6b}{FilmStatistics}}(\textcolor{keywordtype}{size\_t}\ stride)\ :\ \mbox{\hyperlink{class_film_statistics_a4acf2ba4efa2c3daa697d1769146daaa}{step}}(stride)\ \{\};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_film_statistics_a332ff57847146069f1e68d664a8ac06f}{addFrameResult}}(\textcolor{keywordtype}{double}\ timestampMs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_classification_result}{ClassificationResult}}\&\ result);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_film_statistics_ac263d689c6b770ac8de7db3f2a81a988}{setFrameStep}}(\textcolor{keywordtype}{size\_t}\ stride);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_film_statistics_a96df1a57a7848b604518bd8a0eb27b71}{exportToCSV}}(\textcolor{keyword}{const}\ std::string\&\ path)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_film_statistics_a179f692db9d5bf9784e67092c1f2d7be}{printSummary}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ FilmStatisticEval\_hpp\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00093\ }
+
+\end{DoxyCode}

@@ -1,0 +1,121 @@
+\doxysection{Input\+Source Class Reference}
+\hypertarget{class_input_source}{}\label{class_input_source}\index{InputSource@{InputSource}}
+
+
+Abstract base class for loading image or video input in a unified way.  
+
+
+
+
+{\ttfamily \#include $<$File\+Loader.\+hpp$>$}
+
+Inheritance diagram for Input\+Source\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_input_source}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_source_af189bad1c5e1015d3b09227cb51d1075}{Input\+Source}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Constructs an input source with a file path. \end{DoxyCompactList}\item 
+\Hypertarget{class_input_source_a02eec90ae2d3419c82e7fc7f09204e1f}\label{class_input_source_a02eec90ae2d3419c82e7fc7f09204e1f} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Input\+Source} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for polymorphic use. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_input_source_abaec18bf62eec4100d689ad576b9169f}{has\+Next\+Frame}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks whether there is a next frame to process. \end{DoxyCompactList}\item 
+virtual cv\+::\+Mat \& \mbox{\hyperlink{class_input_source_a46c3be398eac73b3b8d836c03ddcf351}{next\+Frame}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the next frame. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_input_source_a79cfe9f30f49bf81f53676d81645dd17}{get\+Current\+Timestamp}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the current timestamp of the frame (in ms). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_input_source_a05c0b917fe5de0b326d343b07a06107e}\label{class_input_source_a05c0b917fe5de0b326d343b07a06107e} 
+std\+::string {\bfseries source\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Path to the input source file (image or video) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for loading image or video input in a unified way. 
+
+This class defines a common interface for different input sources (image or video), allowing the rest of the application to interact with frames in a uniform manner. It supports checking for availability of the next frame, retrieving the frame, and (optionally) querying its timestamp.
+
+Designed to make it easy to switch between static image input and sequential video input. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_input_source_af189bad1c5e1015d3b09227cb51d1075}\index{InputSource@{InputSource}!InputSource@{InputSource}}
+\index{InputSource@{InputSource}!InputSource@{InputSource}}
+\doxysubsubsection{\texorpdfstring{InputSource()}{InputSource()}}
+{\footnotesize\ttfamily \label{class_input_source_af189bad1c5e1015d3b09227cb51d1075} 
+Input\+Source\+::\+Input\+Source (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs an input source with a file path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the image or video file. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_input_source_a79cfe9f30f49bf81f53676d81645dd17}\index{InputSource@{InputSource}!getCurrentTimestamp@{getCurrentTimestamp}}
+\index{getCurrentTimestamp@{getCurrentTimestamp}!InputSource@{InputSource}}
+\doxysubsubsection{\texorpdfstring{getCurrentTimestamp()}{getCurrentTimestamp()}}
+{\footnotesize\ttfamily \label{class_input_source_a79cfe9f30f49bf81f53676d81645dd17} 
+virtual double Input\+Source\+::get\+Current\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the current timestamp of the frame (in ms). 
+
+\begin{DoxyReturn}{Returns}
+Timestamp in milliseconds. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_image_loader_a15dedf31b1d1f5ce468b475018f39adc}{Image\+Loader}}.
+
+\Hypertarget{class_input_source_abaec18bf62eec4100d689ad576b9169f}\index{InputSource@{InputSource}!hasNextFrame@{hasNextFrame}}
+\index{hasNextFrame@{hasNextFrame}!InputSource@{InputSource}}
+\doxysubsubsection{\texorpdfstring{hasNextFrame()}{hasNextFrame()}}
+{\footnotesize\ttfamily \label{class_input_source_abaec18bf62eec4100d689ad576b9169f} 
+virtual bool Input\+Source\+::has\+Next\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether there is a next frame to process. 
+
+\begin{DoxyReturn}{Returns}
+True if a frame is available, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_image_loader_a5302ba92a32276ac9a23f859b62abb51}{Image\+Loader}}.
+
+\Hypertarget{class_input_source_a46c3be398eac73b3b8d836c03ddcf351}\index{InputSource@{InputSource}!nextFrame@{nextFrame}}
+\index{nextFrame@{nextFrame}!InputSource@{InputSource}}
+\doxysubsubsection{\texorpdfstring{nextFrame()}{nextFrame()}}
+{\footnotesize\ttfamily \label{class_input_source_a46c3be398eac73b3b8d836c03ddcf351} 
+virtual cv\+::\+Mat \& Input\+Source\+::next\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the next frame. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the next {\ttfamily cv\+::\+Mat} frame. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_image_loader_aae65387f71c9cc119c94db147b077708}{Image\+Loader}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/File\+Loader.\+hpp\end{DoxyCompactItemize}

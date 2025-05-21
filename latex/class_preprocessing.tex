@@ -1,0 +1,93 @@
+\doxysection{Preprocessing Class Reference}
+\hypertarget{class_preprocessing}{}\label{class_preprocessing}\index{Preprocessing@{Preprocessing}}
+
+
+Class responsible for applying preprocessing operations to a frame.  
+
+
+
+
+{\ttfamily \#include $<$File\+Loader.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_preprocessing_a05a35fbbde57f184aeae6648bd1f260e}{Preprocessing}} (const cv\+::\+Mat frame)
+\begin{DoxyCompactList}\small\item\em Constructs the preprocessing unit with an input frame. \end{DoxyCompactList}\item 
+\Hypertarget{class_preprocessing_ad162a3c39dd11ae2d40f00b5f5474901}\label{class_preprocessing_ad162a3c39dd11ae2d40f00b5f5474901} 
+{\bfseries Preprocessing} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_preprocessing_a508a129b4026d6177d61ae3a2eb3c40e}\label{class_preprocessing_a508a129b4026d6177d61ae3a2eb3c40e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Preprocessing} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_preprocessing_a396223edd2d672d14555bf5a1903f5a1}{Load\+Frame}} (cv\+::\+Mat \&\mbox{\hyperlink{class_preprocessing_aac52479d9834ffde3b7e5964b8d31d92}{image}})
+\begin{DoxyCompactList}\small\item\em Loads a new frame into the processor. \end{DoxyCompactList}\item 
+cv\+::\+Mat \& \mbox{\hyperlink{class_preprocessing_ae121604d081216e78ec7802aa2478131}{Get\+Processed\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Returns the processed image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_preprocessing_aac52479d9834ffde3b7e5964b8d31d92}\label{class_preprocessing_aac52479d9834ffde3b7e5964b8d31d92} 
+cv\+::\+Mat {\bfseries image}
+\begin{DoxyCompactList}\small\item\em Internal image being processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for applying preprocessing operations to a frame. 
+
+This class loads a frame and provides an interface to process it (e.\+g., grayscale, histogram equalization, resizing, denoising, etc.).
+
+Intended to be extended with actual image preprocessing methods for analysis or detection. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_preprocessing_a05a35fbbde57f184aeae6648bd1f260e}\index{Preprocessing@{Preprocessing}!Preprocessing@{Preprocessing}}
+\index{Preprocessing@{Preprocessing}!Preprocessing@{Preprocessing}}
+\doxysubsubsection{\texorpdfstring{Preprocessing()}{Preprocessing()}}
+{\footnotesize\ttfamily \label{class_preprocessing_a05a35fbbde57f184aeae6648bd1f260e} 
+Preprocessing\+::\+Preprocessing (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat}]{frame}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs the preprocessing unit with an input frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Frame to preprocess. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_preprocessing_ae121604d081216e78ec7802aa2478131}\index{Preprocessing@{Preprocessing}!GetProcessedImage@{GetProcessedImage}}
+\index{GetProcessedImage@{GetProcessedImage}!Preprocessing@{Preprocessing}}
+\doxysubsubsection{\texorpdfstring{GetProcessedImage()}{GetProcessedImage()}}
+{\footnotesize\ttfamily \label{class_preprocessing_ae121604d081216e78ec7802aa2478131} 
+cv\+::\+Mat \& Preprocessing\+::\+Get\+Processed\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the processed image. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the processed image. 
+\end{DoxyReturn}
+\Hypertarget{class_preprocessing_a396223edd2d672d14555bf5a1903f5a1}\index{Preprocessing@{Preprocessing}!LoadFrame@{LoadFrame}}
+\index{LoadFrame@{LoadFrame}!Preprocessing@{Preprocessing}}
+\doxysubsubsection{\texorpdfstring{LoadFrame()}{LoadFrame()}}
+{\footnotesize\ttfamily \label{class_preprocessing_a396223edd2d672d14555bf5a1903f5a1} 
+void Preprocessing\+::\+Load\+Frame (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{image}{}\end{DoxyParamCaption})}
+
+
+
+Loads a new frame into the processor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Frame to load for processing. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/File\+Loader.\+hpp\end{DoxyCompactItemize}

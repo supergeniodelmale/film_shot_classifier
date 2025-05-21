@@ -1,0 +1,41 @@
+\doxysection{Shot\+Features Struct Reference}
+\hypertarget{struct_shot_features}{}\label{struct_shot_features}\index{ShotFeatures@{ShotFeatures}}
+
+
+Represents extracted geometric and area-\/based properties from a video frame.  
+
+
+
+
+{\ttfamily \#include $<$Feature\+Proccesor\+And\+Classifier.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_shot_features_a52eb1566c46ae6d19318e25507d5679a}\label{struct_shot_features_a52eb1566c46ae6d19318e25507d5679a} 
+int {\bfseries object\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em Number of detected objects in the frame. \end{DoxyCompactList}\item 
+\Hypertarget{struct_shot_features_ae666409f1b873e0fd73580447de4e880}\label{struct_shot_features_ae666409f1b873e0fd73580447de4e880} 
+double {\bfseries largest\+\_\+object\+\_\+area} = 0.
+\begin{DoxyCompactList}\small\item\em Area of the largest object detected. \end{DoxyCompactList}\item 
+\Hypertarget{struct_shot_features_a7751cb00e4a77b4f5fcd5ab733ff04ec}\label{struct_shot_features_a7751cb00e4a77b4f5fcd5ab733ff04ec} 
+double {\bfseries total\+\_\+object\+\_\+area} = 0.
+\begin{DoxyCompactList}\small\item\em Sum of all object areas. \end{DoxyCompactList}\item 
+\Hypertarget{struct_shot_features_aec98631daf90df3107f149515a4970dc}\label{struct_shot_features_aec98631daf90df3107f149515a4970dc} 
+double {\bfseries total\+\_\+area} = 0.
+\begin{DoxyCompactList}\small\item\em Total area of the frame (width \texorpdfstring{$\ast$}{*} height) \end{DoxyCompactList}\item 
+\Hypertarget{struct_shot_features_adfbe739db9033296f8741c11631af9b0}\label{struct_shot_features_adfbe739db9033296f8741c11631af9b0} 
+std\+::vector$<$ cv\+::\+Point2f $>$ {\bfseries object\+\_\+centers}
+\begin{DoxyCompactList}\small\item\em Center points of detected objects, ordered by size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents extracted geometric and area-\/based properties from a video frame. 
+
+\doxylink{struct_shot_features}{Shot\+Features} holds intermediate data used for shot type classification. It includes statistics like the number of detected objects, the total and largest object area, and the coordinates of their centers.
+
+The {\ttfamily object\+\_\+centers} vector is ordered by object size, with the largest first. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Feature\+Proccesor\+And\+Classifier.\+hpp\end{DoxyCompactItemize}

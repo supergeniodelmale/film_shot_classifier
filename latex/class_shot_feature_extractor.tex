@@ -1,0 +1,78 @@
+\doxysection{Shot\+Feature\+Extractor Class Reference}
+\hypertarget{class_shot_feature_extractor}{}\label{class_shot_feature_extractor}\index{ShotFeatureExtractor@{ShotFeatureExtractor}}
+
+
+Extracts numerical and spatial features from detected objects in a video frame.  
+
+
+
+
+{\ttfamily \#include $<$Feature\+Proccesor\+And\+Classifier.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_shot_features}{Shot\+Features}} \mbox{\hyperlink{class_shot_feature_extractor_ae2d3ff73c72c72afffdee4b257c9d7ae}{extract}} (const cv\+::\+Mat \&frame, const std\+::vector$<$ \mbox{\hyperlink{struct_detected_feature}{Detected\+Feature}} $>$ \&features)
+\begin{DoxyCompactList}\small\item\em Extracts shot-\/level features from a frame and its detected objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shot_feature_extractor_a8e7d00419a3596c12ccea58d3658d1ea}\label{class_shot_feature_extractor_a8e7d00419a3596c12ccea58d3658d1ea} 
+double {\bfseries return\+Total\+Area} (const cv\+::\+Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Computes total frame area. \end{DoxyCompactList}\item 
+\Hypertarget{class_shot_feature_extractor_a97bf6aa9a2477494e43f6045df534a08}\label{class_shot_feature_extractor_a97bf6aa9a2477494e43f6045df534a08} 
+double {\bfseries return\+Laregst\+Object\+Area} (const std\+::vector$<$ \mbox{\hyperlink{struct_detected_feature}{Detected\+Feature}} $>$ \&features)
+\begin{DoxyCompactList}\small\item\em Finds the largest detected object. \end{DoxyCompactList}\item 
+\Hypertarget{class_shot_feature_extractor_a0abf6aac96e0abed7db4223f4be951c6}\label{class_shot_feature_extractor_a0abf6aac96e0abed7db4223f4be951c6} 
+double {\bfseries return\+Total\+Object\+Area} (const std\+::vector$<$ \mbox{\hyperlink{struct_detected_feature}{Detected\+Feature}} $>$ \&features)
+\begin{DoxyCompactList}\small\item\em Sums up all detected object areas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extracts numerical and spatial features from detected objects in a video frame. 
+
+\doxylink{class_shot_feature_extractor}{Shot\+Feature\+Extractor} analyzes a frame and its detected objects and computes a set of high-\/level features that describe the visual composition. These features are then used for classification of shot type or composition analysis.
+
+This class is stateless and suitable for reuse across multiple frames.
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ShotFeatureExtractor\ extractor;}
+\DoxyCodeLine{ShotFeatures\ features\ =\ extractor.\mbox{\hyperlink{class_shot_feature_extractor_ae2d3ff73c72c72afffdee4b257c9d7ae}{extract}}(frame,\ detectedObjects);}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_shot_features}{Shot\+Features} 
+
+\doxylink{struct_detected_feature}{Detected\+Feature} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shot_feature_extractor_ae2d3ff73c72c72afffdee4b257c9d7ae}\index{ShotFeatureExtractor@{ShotFeatureExtractor}!extract@{extract}}
+\index{extract@{extract}!ShotFeatureExtractor@{ShotFeatureExtractor}}
+\doxysubsubsection{\texorpdfstring{extract()}{extract()}}
+{\footnotesize\ttfamily \label{class_shot_feature_extractor_ae2d3ff73c72c72afffdee4b257c9d7ae} 
+\mbox{\hyperlink{struct_shot_features}{Shot\+Features}} Shot\+Feature\+Extractor\+::extract (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{frame}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_detected_feature}{Detected\+Feature}} $>$ \&}]{features}{}\end{DoxyParamCaption})}
+
+
+
+Extracts shot-\/level features from a frame and its detected objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Input image frame from a video. \\
+\hline
+{\em features} & Detected objects in the frame (e.\+g., faces, bodies). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A populated \doxylink{struct_shot_features}{Shot\+Features} structure. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Feature\+Proccesor\+And\+Classifier.\+hpp\end{DoxyCompactItemize}

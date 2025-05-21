@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1620"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7BCE97452D7C554D003789FB"
+               BuildableName = "Film_type_classifier"
+               BlueprintName = "Film_type_classifier"
+               ReferencedContainer = "container:Film_type_classifier.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "YES"
+      customWorkingDirectory = "/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PR&#x30c;EDME&#x30c;TY/8.SEMESTR/COMPUTER VISION/INTERMEDIATE_PROJECT"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES"
+      viewDebuggingEnabled = "No">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7BCE97452D7C554D003789FB"
+            BuildableName = "Film_type_classifier"
+            BlueprintName = "Film_type_classifier"
+            ReferencedContainer = "container:Film_type_classifier.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "&apos;/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PR&#x30c;EDME&#x30c;TY/8.SEMESTR/COMPUTER VISION/LABS/openCV_test/lenaM.bmp&apos;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&apos;/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PR&#x30c;EDME&#x30c;TY/8.SEMESTR/COMPUTER VISION/LABS/Lab 4-20250407/street_scene.png&apos;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&apos;/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PR&#x30c;EDME&#x30c;TY/8.SEMESTR/COMPUTER VISION/LABS/Lab_3/Robocup.jpg&apos;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&apos;/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PR&#x30c;EDME&#x30c;TY/8.SEMESTR/COMPUTER VISION/LABS/Lab 2-20250318/Astronaut_salt_pepper.png&apos;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&apos;/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PR&#x30c;EDME&#x30c;TY/8.SEMESTR/COMPUTER VISION/LABS/Lab 2-20250318/Garden.jpg&apos;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&apos;/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PR&#x30c;EDME&#x30c;TY/8.SEMESTR/COMPUTER VISION/LABS/Lab 1  Intro to OpenCV, pixel manipulation, transformations-20250311/task3/openCV_test/Giraffe.png&apos;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7BCE97452D7C554D003789FB"
+            BuildableName = "Film_type_classifier"
+            BlueprintName = "Film_type_classifier"
+            ReferencedContainer = "container:Film_type_classifier.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

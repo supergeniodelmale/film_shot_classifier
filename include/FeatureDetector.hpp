@@ -10,18 +10,7 @@
 
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
-
-/**
- * @struct DetectedFeature
- * @brief Represents a single detected feature in an image, with label and bounding box.
- *
- * This structure is used to return information about each detected object,
- * such as its class label and location in the image.
- */
-struct DetectedFeature {
-    std::string label;    ///< Type or name of the detected object (e.g., "face")
-    cv::Rect boundingBox; ///< Bounding box of the detected object in image coordinates
-};
+#include "UserStructs.hpp"
 
 /**
  * @class FeatureDetector

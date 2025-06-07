@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
-#include "FeatureProccesorAndClassifier.hpp"
+#include "UserStructs.hpp"
 
 /**
  * @class FilmStatistics

@@ -14,5 +14,6 @@
 #include "FileLoader.hpp"
 #include "FilmStatisticEval.hpp"
 #include "ResultDisplayer.hpp"
+#include "UserStructs.hpp"
 
 #endif //FilmShotClassifier_hpp

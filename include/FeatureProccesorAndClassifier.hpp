@@ -10,28 +10,7 @@
 
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
-#include "FeatureDetector.hpp"
-
-/**
- * @struct ShotFeatures
- * @brief Represents extracted geometric and area-based properties from a video frame.
- *
- * ShotFeatures holds intermediate data used for shot type classification. It includes
- * statistics like the number of detected objects, the total and largest object area,
- * and the coordinates of their centers.
- *
- * The `object_centers` vector is ordered by object size, with the largest first.
- */
-struct ShotFeatures {
-    int object_count = 0;                ///< Number of detected objects in the frame
-
-    double largest_object_area = 0.;     ///< Area of the largest object detected
-    double total_object_area = 0.;       ///< Sum of all object areas
-    double total_area = 0.;              ///< Total area of the frame (width * height)
-
-    // for good shot classification + we can add some statistical metrics
-    std::vector<cv::Point2f> object_centers; ///< Center points of detected objects, ordered by size
-};
+#include "UserStructs.hpp"
 
 /**
  * @class ShotFeatureExtractor
@@ -71,30 +50,6 @@ public:
     ShotFeatures extract(const cv::Mat& frame, const std::vector<DetectedFeature>& features);
 };
 
-/**
- * @enum ShotType
- * @brief Enumeration representing the type of cinematic shot.
- *
- * Used to categorize frames into typical shot sizes.
- */
-enum class ShotType {
-    CLOSE_UP,   ///< A close-up shot, typically a large face
-    MEDIUM,     ///< A medium shot, e.g., upper body
-    WIDE,       ///< A wide shot, showing full figures or environment
-    UNKNOWN     ///< Could not determine shot type
-};
-
-/**
- * @struct ClassificationResult
- * @brief Contains the result of shot type classification.
- *
- * Holds both the most likely predicted shot type and a probability
- * distribution over all possible shot types.
- */
-struct ClassificationResult {
-    ShotType predictedType = ShotType::UNKNOWN;             ///< Most probable shot type
-    std::map<ShotType, double> probabilities;               ///< Probability distribution across shot types
-};
 
 /**
  * @class ShotClassifier

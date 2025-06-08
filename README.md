@@ -1,13 +1,5 @@
 # 🎬 Film Shot Type Classification
 
-## 📅 Timeline
-
-| Activity                            | Deadline       |
-|-------------------------------------|----------------|
-| Project proposal & test samples     | 19 May         |
-| Proposal discussion (lab session)   | 20 May         |
-| Finalization & approval             | 26 May         |
-
 This project focuses on the automatic classification of cinematic shot types (such as **close-up**, **medium**, and **wide** shots) from video or image data. The classification is based on detecting and analyzing visual features — primarily faces and objects — using classical computer vision techniques (e.g., **Haar cascades**) and handcrafted feature extraction.
 
 The motivation for this tool is to support tasks such as:
@@ -34,6 +26,12 @@ The application processes input frame-by-frame, extracts spatial and geometric f
 ###Marek 
 - `FilmStatisticEval` – Aggregates classification results across frames  
 - `TestDatasetEval` – Compares predictions with ground truth labels  
+
+---
+## Notes
+- Do not make deep copies, since we are aiming to work with video
+- Do not use static varibles inside classes
+- Respect dataflow and do not edit it without telling others
 
 # 📄 Final Project Report 
 *Here is report structure derived from example project in moodle*
@@ -106,10 +104,10 @@ The application processes input frame-by-frame, extracts spatial and geometric f
 
 ## 8. Individual Contributions
 
-| Team Member | Contribution                                  | Hours |
+| Team Member | Contribution                                  | Hours  |
 |-------------|-----------------------------------------------|--------|
-| Member 1    | e.g., feature detection, classifier module     |        |
-| Member 2    | e.g., evaluation, testing, visualization       |        |
+| Member 1    | e.g., feature detection, classifier module    |        |
+| Member 2    | e.g., evaluation, testing, visualization      |        |
 
 ---
 

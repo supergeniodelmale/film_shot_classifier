@@ -42,10 +42,25 @@
  */
 class FilmStatistics
 {
-    size_t step = 1; ///< Frame step size – allows skipping frames during analysis
     std::map<ShotType, int> shot_counts; ///< Count of each shot type
-    std::vector<std::pair<double, ShotType>> timeline; ///< Timeline of shot types (timestamp → type)
-    int totalFrames = 0; ///< Total number of frames processed
+    std::vector<std::pair<double, ShotType>> shot_type_timeline; ///< Timeline of shot types (timestamp -> type)
+    std::vector<std::pair<double, double>> enthropy_timeline; ///<  timestamp -> enthropy in previous config.enthropy_window_size samples
+    
+    std::deque<classification_result> oversampling_sliding_window;
+    std::deque<classification_result> enthropy_sliding_window;
+    
+    int total_frames = 0;///< Total number of frames processed
+    int evaluated_frames = 0; ///< Number of samples in statistic
+    
+    classification_result current_sample_oversampled;
+    double entropy = 0.0;
+    double timestamp_ms = 0.0;
+    
+    FilmStatisticsEvalConfig config;
+    
+    
+    void oversampleInputData();
+    void computeEnthropy();
 
 public:
     /**
@@ -53,11 +68,13 @@ public:
      */
     FilmStatistics() = default;
 
-    /**
-     * @brief Constructor with custom frame stride.
-     * @param stride Number of frames to skip between evaluations (e.g. 1 = every frame, 5 = every 5th).
-     */
-    FilmStatistics(size_t stride) : step(stride) {};
+//    /**
+//     * @brief Constructor with custom frame stride.
+//     * @param stride Number of frames to skip between evaluations (e.g. 1 = every frame, 5 = every 5th).
+//     */
+//    FilmStatistics(size_t stride) : step(stride) {};
+    
+    void addConfigurationStruct(FilmStatisticsEvalConfig cfg);
 
     /**
      * @brief Adds the classification result for a single frame.
@@ -65,7 +82,7 @@ public:
      * @param timestampMs Timestamp of the frame in milliseconds.
      * @param result Classification result containing shot type.
      */
-    void addFrameResult(double timestampMs, const ClassificationResult& result);
+    void addFrameResult(const double timestampMs, const classification_result & result);
 
     /**
      * @brief Sets the number of frames to skip during analysis.

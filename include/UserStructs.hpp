@@ -65,10 +65,18 @@ enum class ShotType {
  * Holds both the most likely predicted shot type and a probability
  * distribution over all possible shot types.
  */
-struct ClassificationResult {
-    ShotType predictedType = ShotType::UNKNOWN;             ///< Most probable shot type
+struct classification_result {
+    ShotType predictedType = ShotType::UNKNOWN;             ///< Most probable shot type, redundant but efective
     std::map<ShotType, double> probabilities;               ///< Probability distribution across shot types
 };
 
+struct FilmStatisticsEvalConfig {
+    size_t input_step = 1; ///< Frame step size – allows skipping frames during analysis
+    size_t input_oversample = 1; ///< Oversampling buffer size
+    size_t output_step = 1;
+    size_t enthropy_window_size = 30;
+    
+    
+};
 
 #endif /* UserStructs_hpp */

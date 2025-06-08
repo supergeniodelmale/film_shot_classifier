@@ -15,15 +15,15 @@ The application processes input frame-by-frame, extracts spatial and geometric f
 - `main` – Program entry point 
 - `UserStructs` – Definitions of shared data types and enums
 
-###Miroslaw
+### Miroslaw
 - `FeatureDetector` – Object detection using Haar cascades  
 - `FeatureProcessorAndClassifier` – Feature extraction and shot type classification logic  
 
-###Peter
+### Peter
 - `FileLoader` – Abstract interface for loading images or video  
 - `ResultDisplayer` – Displays or exports results  
 
-###Marek 
+### Marek 
 - `FilmStatisticEval` – Aggregates classification results across frames  
 - `TestDatasetEval` – Compares predictions with ground truth labels  
 

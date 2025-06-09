@@ -64,6 +64,8 @@ enum class ShotType {
  *
  * Holds both the most likely predicted shot type and a probability
  * distribution over all possible shot types.
+ *
+ *Set probability of detected ShotType to 1 if there is not better metrics
  */
 struct classification_result {
     ShotType predictedType = ShotType::UNKNOWN;             ///< Most probable shot type, redundant but efective
@@ -73,8 +75,15 @@ struct classification_result {
 struct FilmStatisticsEvalConfig {
     size_t input_step = 1; ///< Frame step size – allows skipping frames during analysis
     size_t input_oversample = 1; ///< Oversampling buffer size
-    size_t output_step = 1;
-    size_t enthropy_window_size = 30;
+    ///<
+    size_t entropy_window_size = 20; ///< enthropy window size
+    size_t entropy_variance_window_size = 30; ///< 0-not computed
+    double cut_detect_entropy_threshold = 1;
+    
+    bool output_ratios_series = false;
+    size_t output_prob_time_series = 1; ///< 0-not computed, 1-x output oversampling
+    size_t output_entropy_time_series = 1; ///< 0-not computed, 1-x output oversampling
+    size_t output_entropy_variance_time_series = 1; ///< 0-not computed, 1-x output oversampling
     
     
 };

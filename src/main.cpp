@@ -132,6 +132,8 @@ int main()
     std::vector<std::pair<double, double>> ent = film_stats.getEntropy();
     std::vector<std::pair<double, double>> ent_v = film_stats.getEntropyVAriance();
     std::vector<std::pair<double, ShotType>> st = film_stats.getShotType();
+    
+    film_stats.exportToCSV("path");
         
     return 0;
 }

@@ -1,11 +1,9 @@
 #include "ShotClassifier.hpp"
 
-ShotClassifier::ShotClassifier(int threshold)
-: area_threshold(threshold)
-{}
-
 int ShotClassifier::classify(const std::vector<cv::Rect>& shot_features)
 {
+    int area_threshold = 100
+    
     if (shot_features.empty()) {
         return 0; // no faces detected
     }
